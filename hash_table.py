@@ -2,6 +2,10 @@
 methods to solve collisions:
 1. separate chaining
 2. linear probing
+
+Division method:
+h(K) = k mod M
+where k is the key value and M is size of the hash table
 """
 
 
@@ -56,3 +60,20 @@ print(my_hash_table.get_item('abc'))
 
 print('test keys')
 print(my_hash_table.keys())
+
+
+# check if elements in two lists are same(using hash table)
+def items_are_same(list1, list2):
+    my_dict = {}
+    for i in list1:
+        my_dict[i] = True
+
+    for j in list2:
+        if j in my_dict:
+            return True
+    return False
+
+
+list1 = [1, 2, 5, 7]
+list2 = [0, 4, 6, 7]
+print(items_are_same(list1, list2))
