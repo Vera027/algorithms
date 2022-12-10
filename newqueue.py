@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class Queue:
+class Queue_new:
     def __init__(self, value):
         new_node = Node(value)
         self.first = new_node
@@ -37,7 +37,7 @@ class Queue:
         self.length -= 1
 
 
-my_queue = Queue(3)
+my_queue = Queue_new(3)
 my_queue.print_queue()
 
 print('test enqueue')
